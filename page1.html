@@ -1,25 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>page 1</title>
-    <link rel="stylesheet" href="./quiz.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>page 1</title>
+   <link rel="stylesheet" href="./quiz.css">
 </head>
+
 <body>
-     <div class="nav">
-        <img src="./Assests/FAQ.png" class="navicon">
-     </div>
-     <div class="flex">
-     <div class="form">
-        <h1 class="h1">Login</h1>
-       <div class="image">
-        <img src="./Assests/Ellipse 5.png" class="logo">
-        </div>
-        <input type="text" name="username" id="username" class="textArea" placeholder="Name"><br><br>
-        <a href="./page2.html"><button class="btn" onclick="saveName()">Start</button></a>
-     </div>
-     </div>
-     <script src="./quiz.js"></script>
+   <!-- nav bar -->
+   <div class="nav">
+      <img src="./Assests/FAQ.png" class="navicon">
+      <span style="font-weight: bold;">Quiz App</span>
+      <span id="displayName" style="margin-left: 20px;"></span>
+      <div id="timer" style="margin-left: auto;"></div>
+   </div>
+
+   <!-- login section -->
+   <div class="flex">
+      <div class="form">
+         <h1 class="h1">Login</h1>
+         <div class="image">
+            <img src="./Assests/Ellipse 5.png" class="logo">
+         </div>
+         <input type="text" name="username" id="username" class="textArea" placeholder="Name"><br><br>
+         <button class="btn" onclick="saveName()">Start</button>
+      </div>
+   </div>
+
+   <!-- quiz section -->
+   <div id="quiz-section" class="flex" style="display: none;">
+      <div class="form">
+         <h3 id="question" class="h3"></h3>
+         <div id="options"></div>
+         <button class="btnNew" onclick="nextQuestion()">Next</button>
+      </div>
+   </div>
+
+   <!-- result section -->
+   <div id="result-section" class="flex" style="display: none;">
+      <div class="form">
+         <h2 class="h1">Quiz Completed!</h2>
+         <p id="scoreDisplay" style="text-align: center; font-weight: bold;"></p>
+         <button class="btn" onclick="restartQuiz()">Restart</button>
+      </div>
+   </div>
+
+   <script src="./quiz.js"></script>
 </body>
+
 </html>
