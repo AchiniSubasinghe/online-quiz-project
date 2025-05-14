@@ -2,31 +2,31 @@ const questions = [
       {
         question: "1. What does CSS stand for?",
         options: [
-          "Creative Style System",
-          "Cascading Style Sheet",
-          "Computer Styled Sheet",
-          "Colorful Style Sheet"
+          "Creative Style System <br> <br>",
+          "Cascading Style Sheet <br><br>",
+          "Computer Styled Sheet <br><br>",
+          "Colorful Style Sheet <br> <br>"
         ],
         answer: "Cascading Style Sheet"
       },
       {
         question: "2. What does HTML stand for?",
         options: [
-          "Hyper Text Markup Language",
-          "Home Tool Markup Language",
-          "Hyperlinks and Text Markup Language",
-          "Hyper Tool Multiple Language"
+          "Hyper Text Markup Language  <br><br>",
+          "Home Tool Markup Language <br><br> ",
+          "Hyperlinks and Text Markup Language <br> <br>",
+          "Hyper Tool Multiple Language <br><br>"
         ],
         answer: "Hyper Text Markup Language"
       },
       {
         question: "3. Which tag is used to create a hyperlink in HTML?",
-        options: ["link", "a", "href", "hyperlink"],
+        options: ["link  <br> <br>", "a  <br><br>", "href  <br><br>", "hyperlink  <br><br>"],
         answer: "a"
       },
       {
         question: "4. Which HTML element defines important text?",
-        options: ["b", "em", "strong", "i"],
+        options: ["b  <br><br>", "em  <br><br>", "strong <br> <br>", "i <br> <br>"],
         answer: "strong"
       }
     ];

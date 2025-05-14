@@ -20,10 +20,6 @@
     border-radius: 5px;
     
 }
-.flex{
-    display: flex;
-    justify-content: center;
-}
 
 .h1{
     color: #5EB562;
@@ -60,6 +56,10 @@
     margin-top: 35px;
 }
 
+.name{
+    margin-left: 1000px;
+}
+
 /* page2 */
 .questions{
     border: 1px black solid;
@@ -87,5 +87,27 @@
     border: 0px black solid;
     margin-left: 800px;
     margin-top: 35px;
+}
+
+.flex{
+      display: flex;
+    justify-content: center;
+}
+
+.flexQuiz{
+    display: flex;
+    justify-content: center;
+    border: 0px black solid;
+    height: 530px;
+}
+
+.form1{
+    border: 0px black solid;
+    width: 400px;
+    height: 300px;
+    margin-top: 100px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 

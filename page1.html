@@ -9,43 +9,43 @@
 </head>
 
 <body>
-   <!-- nav bar -->
-   <div class="nav">
-      <img src="./Assests/FAQ.png" class="navicon">
-      <span style="font-weight: bold;">Quiz App</span>
-      <span id="displayName" style="margin-left: 20px;"></span>
-      <div id="timer" style="margin-left: auto;"></div>
-   </div>
+  <!-- nav bar -->
+  <div class="nav">
+   <img src="./Assests/FAQ.png" class="navicon">
+    <span id="displayName" style="margin-left: 1100px; position: relative; bottom: 50px; color: white; font-weight: bold;"></span>
+    <div id="timer" style="margin-left: 1200px; font-weight: bold; "></div>
+  </div>
 
-   <!-- login section -->
-   <div class="flex">
-      <div class="form">
-         <h1 class="h1">Login</h1>
-         <div class="image">
-            <img src="./Assests/Ellipse 5.png" class="logo">
-         </div>
-         <input type="text" name="username" id="username" class="textArea" placeholder="Name"><br><br>
-         <button class="btn" onclick="saveName()">Start</button>
+  <!-- Login Section -->
+  <div id="login-section" class="flex">
+    <div class="form">
+      <h1 class="h1">Login</h1>
+      <div class="image">
+          <img src="./Assests/Ellipse 5.png">
       </div>
-   </div>
+      <input type="text" id="username" class="textArea" placeholder="Enter your name" />
+      <button class="btn" onclick="startQuiz()">Start</button>
+    </div>
+  </div>
 
-   <!-- quiz section -->
-   <div id="quiz-section" class="flex" style="display: none;">
-      <div class="form">
-         <h3 id="question" class="h3"></h3>
-         <div id="options"></div>
-         <button class="btnNew" onclick="nextQuestion()">Next</button>
-      </div>
-   </div>
+  <!-- Quiz Section -->
+  <div id="quiz-section" class="flexQuiz" style="display: none; background-image: url('./Assests/1\ 1.png'); ;">
+    <div class="form1">
+      <h3 id="question" class="h3"></h3>
+      <div id="options" style="text-align: center;"></div>
+      <button class="btn" onclick="nextQuestion()">Next</button>
+    </div>
+  </div>
 
-   <!-- result section -->
-   <div id="result-section" class="flex" style="display: none;">
-      <div class="form">
-         <h2 class="h1">Quiz Completed!</h2>
-         <p id="scoreDisplay" style="text-align: center; font-weight: bold;"></p>
-         <button class="btn" onclick="restartQuiz()">Restart</button>
-      </div>
-   </div>
+  <!-- Result Section -->
+  <div id="result-section" class="flex" style="display: none;">
+    <div class="form1">
+      <h2 class="h1">Quiz Completed!</h2>
+      <p id="scoreDisplay" style="text-align: center; font-weight: bold;"></p>
+      <button class="btn" onclick="restartQuiz()">Restart</button>
+    </div>
+  </div>
+
 
    <script src="./quiz.js"></script>
 </body>
