@@ -12,8 +12,8 @@
   <!-- nav bar -->
   <div class="nav">
     <img src="./Assests/FAQ.png" class="navicon">
-    <span id="displayName" style="margin-left: 1100px; position: relative; bottom: 50px; color: white; font-weight: bold;"></span>
-    <div id="timer" style="margin-left: 1200px; font-weight: bold;"></div>
+    <div id="displayName" class="displayName"></div>
+    <div id="timer" class="displayTimer"></div>
   </div>
 
   <!-- Login Section -->
@@ -29,10 +29,10 @@
   </div>
 
   <!-- Quiz Section -->
-  <div id="quiz-section" class="flexQuiz" style="display: none; background-image: url('./Assests/1 1.png');">
+  <div id="quiz-section" class="flexQuiz">
     <div class="form1">
       <h3 id="question" class="h3"></h3>
-      <div id="options" style="text-align: center;"></div>
+      <div id="options" class="options" ></div>
       <button class="btn" onclick="nextQuestion()">Next</button>
     </div>
   </div>
@@ -41,7 +41,7 @@
   <div id="result-section" class="flex" style="display: none;">
     <div class="form1">
       <h2 class="h1">Quiz Completed!</h2>
-      <p id="scoreDisplay" style="text-align: center; font-weight: bold;"></p>
+      <p id="scoreDisplay" class="scoreDisplay"></p>
       <button class="btn" onclick="restartQuiz()">Restart</button>
     </div>
   </div>

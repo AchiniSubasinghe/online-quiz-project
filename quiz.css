@@ -11,6 +11,19 @@
     margin-left: 30px;
 }
 
+.displayName{
+    margin-left: 1100px; 
+    position: relative; 
+    bottom: 50px; 
+    color: white;
+     font-weight: bold;
+}
+
+.displayTimer{
+     margin-left: 1200px; 
+     font-weight: bold;
+}
+
 .form{
     border: 0px black solid;
     width: 400px;
@@ -61,22 +74,11 @@
 }
 
 /* page2 */
-.questions{
-    border: 1px black solid;
-    height: 250px;
-    width: 400px;
-    margin-left: 500px;
-    margin-top: 100px;
-}
 
 .h3{
     text-align: center;
 }
 
-.r{
-    margin-left: 80px;
-    color: #5EB562;
-}
 
 .btnNew{
      width: 90px;
@@ -99,6 +101,7 @@
     justify-content: center;
     border: 0px black solid;
     height: 530px;
+    display: none; background-image: url('./Assests/1 1.png');
 }
 
 .form1{
@@ -111,3 +114,11 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+.options{
+    text-align: center;
+}
+
+.scoreDisplay{
+    text-align: center;
+     font-weight: bold;
+}
