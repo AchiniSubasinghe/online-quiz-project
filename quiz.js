@@ -30,39 +30,40 @@ const questions = [
     answer: "strong"
   }
 ];
-// global variables
+
 let currentQuestion = 0;
 let score = 0;
 let selectedOption = null;
 let timerInterval;
 let timeLeft = 20;
 
-// starting the quiz
+
 function startQuiz() {
   const username = document.getElementById("username").value.trim();
-  //  checks if the user entered a name.
+  
   if (!username) {
     alert("Please enter your name.");
     return;
   }
-  // Stores the name in localStorage (browser memory).
+
   localStorage.setItem("username", username);
   document.getElementById("displayName").innerText = `Welcome, ${username}`;
 
-// Hides the login screen and shows the quiz screen.
+
   document.getElementById("login-section").style.display = "none";
   document.getElementById("quiz-section").style.display = "flex";
   currentQuestion = 0;
   score = 0;
-  // Shows the first question
+
   showQuestion();
-  // Starts the countdown timer.
+  
   startTimer();
 }
 
 function showQuestion() {
-    // Picks the current question from the list.
+   
   selectedOption = null;
+
   const q = questions[currentQuestion];
 
   document.getElementById("question").innerText = q.question;
@@ -78,7 +79,6 @@ function showQuestion() {
   });
 
   
-// Allows the user to select an option.
   document.querySelectorAll('input[name="option"]').forEach((radio) => {
     radio.addEventListener("change", () => {
       selectedOption = radio.value;
