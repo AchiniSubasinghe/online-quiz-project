@@ -2,18 +2,18 @@
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>onilneQuiz</title>
-   <link rel="stylesheet" href="./quiz.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Quiz</title>
+  <link rel="stylesheet" href="./quiz.css" />
 </head>
 
 <body>
-  <!-- nav bar -->
+  <!-- Nav Bar -->
   <div class="nav">
-    <img src="./Assests/FAQ.png" class="navicon">
+    <img src="./Assests/FAQ.png" class="navicon" alt="Quiz Logo" />
     <div id="displayName" class="displayName"></div>
-    <div id="timer" class="displayTimer"></div>
+    <div id="timer" class="displayTimer" style="display: none;"></div>
   </div>
 
   <!-- Login Section -->
@@ -21,23 +21,23 @@
     <div class="form">
       <h1 class="h1">Login</h1>
       <div class="image">
-        <img src="./Assests/Ellipse 5.png">
+        <img src="./Assests/Ellipse 5.png" alt="User Icon" />
       </div>
-      <input type="text" id="username" class="textArea" placeholder="Enter your name" />
+      <input type="text" id="username" class="textArea" placeholder="Enter your name" required />
       <button class="btn" onclick="startQuiz()">Start</button>
     </div>
   </div>
 
   <!-- Quiz Section -->
-  <div id="quiz-section" class="flexQuiz">
+  <div id="quiz-section" class="flexQuiz" style="display: none;">
     <div class="form1">
       <h3 id="question" class="h3"></h3>
-      <div id="options" class="options" ></div>
+      <div id="options" class="options"></div>
       <button class="btn" onclick="nextQuestion()">Next</button>
     </div>
   </div>
 
-  <!-- Result Section -->
+  < Result Section -->
   <div id="result-section" class="flex" style="display: none;">
     <div class="form1">
       <h2 class="h1">Quiz Completed!</h2>
@@ -46,6 +46,7 @@
     </div>
   </div>
 
+  <!-- External JavaScript File -->
   <script src="./quiz.js"></script>
 </body>
 

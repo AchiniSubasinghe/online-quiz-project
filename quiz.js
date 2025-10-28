@@ -29,6 +29,7 @@ const questions = [
     options: ["b", "em", "strong", "i"],
     answer: "strong"
   }
+  
 ];
 
 let currentQuestion = 0;
@@ -52,17 +53,19 @@ function startQuiz() {
 
   document.getElementById("login-section").style.display = "none";
   document.getElementById("quiz-section").style.display = "flex";
+
+  document.getElementById("timer").style.display = "block"; // Show timer when quiz starts
+
   currentQuestion = 0;
   score = 0;
 
-  showQuestion();
-  
+ 
+ showQuestion();
   startTimer();
 }
 
 function showQuestion() {
-   
-  selectedOption = null;
+  selectedOption = null; 
 
   const q = questions[currentQuestion];
 
@@ -78,7 +81,7 @@ function showQuestion() {
     `;
   });
 
-  
+ 
   document.querySelectorAll('input[name="option"]').forEach((radio) => {
     radio.addEventListener("change", () => {
       selectedOption = radio.value;
@@ -90,17 +93,14 @@ function showQuestion() {
 }
 
 function nextQuestion() {
-  if (!selectedOption) {
-    alert("Please select an answer.");
-    return;
-  }
+ 
 
   if (selectedOption === questions[currentQuestion].answer) {
     score++;
   }
 
   currentQuestion++;
-  clearInterval(timerInterval);
+  clearInterval(timerInterval); 
 
   if (currentQuestion < questions.length) {
     showQuestion();
@@ -114,26 +114,34 @@ function showResult() {
   document.getElementById("quiz-section").style.display = "none";
   document.getElementById("result-section").style.display = "flex";
   document.getElementById("scoreDisplay").innerText = `Your Score: ${score}/${questions.length}`;
+
   clearInterval(timerInterval);
+  document.getElementById("timer").style.display = "none"; 
 }
 
 function restartQuiz() {
   localStorage.removeItem("username");
+
   document.getElementById("username").value = "";
   document.getElementById("displayName").innerText = "";
+
   document.getElementById("result-section").style.display = "none";
   document.getElementById("login-section").style.display = "flex";
-}
 
+  clearInterval(timerInterval); 
+  document.getElementById("timer").style.display = "none"; 
+}
 function startTimer() {
+  document.getElementById("timer").style.display = "block";
   updateTimerDisplay();
+
   timerInterval = setInterval(() => {
     timeLeft--;
     updateTimerDisplay();
+
     if (timeLeft <= 0) {
       clearInterval(timerInterval);
-      alert("Time's up! Moving to next question.");
-      nextQuestion();
+      nextQuestion(); 
     }
   }, 1000);
 }
